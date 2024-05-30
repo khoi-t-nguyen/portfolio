@@ -1,0 +1,75 @@
+html, body {
+    background-color: rgb(28, 53, 99);
+    font-family: 'Courier New', Courier, monospace;
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Prevent extra scrollbars */
+    display: flex;
+    flex-direction: column; /* Allow vertical layout of pages */
+    scroll-snap-type: y mandatory; /* Enable vertical scroll snapping */
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+body {
+    overflow-y: scroll; /* Enable vertical scrolling */
+}
+
+/* .intro h1 {
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 2s steps(19),
+        cursor .4s step-end infinite alternate;
+} */
+
+/* cursor blinking */
+/* @keyframes cursor {
+    50% { border-color: transparent;}
+} */
+
+/* typing effect */
+/* @keyframes typing {
+    from { width: 0}
+} */
+
+.page {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start; /* Snap each section to the start */
+    scroll-snap-stop: always; /* Increase scroll sensitivity */
+}
+
+.intro {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text inside the h1 */
+}
+
+.intro h1, .page:nth-child(odd) h2{
+    color: white;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 20px; /* Add padding below the image */
+}
+
+.page:nth-child(odd) {
+    background-color: rgb(28, 53, 99); /* Dark background for odd sections */
+    background-image: url('./assets/5570834.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.page:nth-child(even) {
+    background-color: rgb(255, 255, 255); /* white background for even sections */
+}
