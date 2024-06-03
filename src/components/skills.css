@@ -1,0 +1,41 @@
+.skills-container {
+    position: relative; /* Set position to relative */
+    z-index: 1; /* Ensure the content is above the pseudo-element */
+}
+
+.skills::before {
+    content: ''; /* Add content to pseudo-element */
+    position: absolute; /* Set position to absolute */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover the entire container */
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1); /* Translucent white background */
+    backdrop-filter: blur(50px); /* Apply blur effect */
+    z-index: -1; /* Set z-index lower than content */
+    border-radius: 10px; /* Add rounded corners */
+}
+
+.skills {
+    position: relative; /* Ensure the content is above the pseudo-element */
+    padding: 25px; /* Add some padding inside the box */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    width: 80%; /* Set the width of the box */
+    max-width: 600px; /* Set maximum width */
+    text-align: center; /* Center text inside the box */
+    margin: 20px auto; /* Center the box horizontally and provide some space */
+    color: white; /* Text color */
+}
+
+.skills-list {
+    columns: 3; /* Set the number of columns */
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.skills-list li {
+    padding: 5px 5px; /* Add padding to each list item */
+    font-size: 30px;
+}

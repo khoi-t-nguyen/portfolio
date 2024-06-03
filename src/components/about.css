@@ -1,0 +1,41 @@
+/* Styling for the about section */
+.about {
+    position: relative; /* Ensure the content is above the pseudo-element */
+    padding: 25px; /* Add some padding inside the box */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    width: 80%; /* Set the width of the box */
+    max-width: 600px; /* Set maximum width */
+    text-align: center; /* Center text inside the box */
+    margin: 20px auto; /* Center the box horizontally and provide some space */
+    background-color: rgba(17, 24, 50, 0.1); /* Transparent blue background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+}
+
+/* Pseudo-element to create the frosted glass effect */
+.about::before {
+    content: ''; /* Add content to pseudo-element */
+    position: absolute; /* Set position to absolute */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover the entire container */
+    height: 100%;
+    background-color: rgba(17, 24, 50, 0.5); /* Translucent blue background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    z-index: -1; /* Set z-index lower than content */
+    border-radius: 10px; /* Add rounded corners */
+}
+
+/* Page-specific styles for the about section */
+.page.about h2 {
+    margin-bottom: 20px; /* Add space below the heading */
+    font-size: 2em; /* Increase font size if desired */
+}
+
+.page.about p {
+    margin: 10px 0; /* Add space above and below each paragraph */
+    font-size: 1.2em; /* Increase font size if desired */
+    max-width: 600px; /* Optional: Set a max width for better readability */
+    margin-left: auto;
+    margin-right: auto;
+}

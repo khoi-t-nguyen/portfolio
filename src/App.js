@@ -3,7 +3,7 @@ import Intro from './components/Intro';
 import About from './components/About';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
-import './styles.css'; // Ensure your CSS is imported
+import './styles.css';
 
 function App() {
     return (

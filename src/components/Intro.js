@@ -1,6 +1,6 @@
 import React from 'react';
-import profilePicture from '../assets/DSCF0651.JPG'; // Import the image
-import '../styles.css'; // Ensure your CSS is imported
+import profilePicture from '../assets/DSCF0651.JPG';
+import '../styles.css';
 
 function Intro() {
     return (
